@@ -1,4 +1,4 @@
-# NgIfNgForBootstrapRickMorty
+# Ejemplo uso *ngIf, *ngFor: personajes Rick and Morty + Bootstrap 5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 

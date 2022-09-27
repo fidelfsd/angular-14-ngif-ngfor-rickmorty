@@ -1,0 +1,33 @@
+<div class="charactares-container" *ngIf="isDataAvailable; else nodata">
+  <ul>
+    <li *ngFor="let character of characters">
+      <div class="card" style="width: 18rem">
+        <img
+          [src]="character.image"
+          class="card-img-top"
+          alt="{{ character.name }}."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ character.name }}</h5>
+          <p class="card-text">
+            <span class="char-detail">
+              <i class="bi bi-heart"></i> {{ character.status }}
+            </span>
+            <span class="char-detail">
+              <i class="bi bi-person"></i> {{ character.gender }}
+            </span>
+            <span class="char-detail">
+              <i class="bi bi-calendar-week"></i>
+              {{ character.created | date: "y" }}
+            </span>
+          </p>
+          <a href="{{ character.url }}" class="btn btn-warning">Read more..</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<ng-template #nodata>
+  <p>Esperando datos...</p>
+</ng-template>
